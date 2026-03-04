@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charme | Perfumería de Lujo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div id="cookie-banner" class="cookie-notice shadow">
+        <i class="fas fa-cookie-bite"></i>
+        <p>Usamos cookies para que tu experiencia sea perfecta. ¿Aceptas?</p>
+        <button id="accept-cookies">Aceptar</button>
+    </div>
+
+    <nav class="navbar">
+        <div class="logo">
+            <span class="char">Char</span><span class="me">me</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Inicio</a></li>
+            <li><a href="cosmeticos.html">Cosméticos</a></li>
+            <li><a href="perfumes.html">Perfumes</a></li>
+            <li><a href="conocenos.html">Conócenos</a></li>
+            <li><a href="otros.html">Otros</a></li>
+        </ul>
+    </nav>
+
+    <header class="main-hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Tu esencia, <br>tu <span class="highlight">distinción</span>.</h1>
+                <p>Descubre fragancias exclusivas diseñadas para resaltar tu presencia. En Charme, la elegancia es nuestra firma.</p>
+            </div>
+
+            <div class="hero-form">
+                <form action="https://formspree.io/f/tu_codigo" method="POST" class="glass-form shadow">
+                    <h3>¿Te asesoramos?</h3>
+                    <p>Cuéntanos qué buscas y nuestros expertos te escribirán.</p>
+                    
+                    <div class="input-group">
+                        <label>Email</label>
+                        <input type="email" name="email" placeholder="ejemplo@correo.com" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>¿Qué te interesa?</label>
+                        <textarea name="mensaje" rows="4" placeholder="Busco un perfume floral..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit">Enviar Solicitud</button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <section class="products-preview">
+        <h2 class="title">Nuestras Joyas</h2>
+        <div class="carousel-grid">
+            <div class="product-card shadow">
+                <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=500" alt="Perfume 1">
+                <div class="info">
+                    <h4>Ethereal Blossom</h4>
+                    <span>$85.00</span>
+                </div>
+            </div>
+            <div class="product-card shadow">
+                <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=500" alt="Perfume 2">
+                <div class="info">
+                    <h4>Night Amber</h4>
+                    <span>$120.00</span>
+                </div>
+            </div>
+            <div class="product-card shadow">
+                <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?q=80&w=500" alt="Perfume 3">
+                <div class="info">
+                    <h4>Velvet Rose</h4>
+                    <span>$95.00</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="socials">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <p>&copy; 2026 <strong>Charme</strong>. Todos los derechos reservados.</p>
+            
+            <div class="legal-box">
+                <a href="privacidad.html" class="btn-legal">Aviso de Privacidad</a>
+                <a href="terminos.html" class="btn-legal">Términos de Servicio</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const banner = document.getElementById('cookie-banner');
+        const btn = document.getElementById('accept-cookies');
+        if (localStorage.getItem('charme_cookies') === 'accepted') {
+            banner.style.display = 'none';
+        }
+        btn.onclick = () => {
+            localStorage.setItem('charme_cookies', 'accepted');
+            banner.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

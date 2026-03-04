@@ -1,0 +1,174 @@
+:root {
+    --morado-lila: #9b59b6;
+    --morado-fuerte: #8e44ad;
+    --texto: #2d3436;
+    --sombra: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Poppins', sans-serif; background-color: #ffffff; color: var(--texto); }
+
+/* LOGO CON ESTILO PLAYFAIR */
+.logo { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-style: italic; }
+.char { color: var(--texto); font-weight: 700; }
+.me { color: var(--morado-lila); font-weight: 400; margin-left: -2px; }
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 10%;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0; z-index: 1000;
+}
+.nav-links { display: flex; list-style: none; gap: 2rem; }
+.nav-links a { text-decoration: none; color: var(--texto); font-weight: 500; transition: 0.3s; }
+.nav-links a:hover, .active { color: var(--morado-lila); }
+
+/* HERO SECCIÓN */
+.main-hero {
+    background: linear-gradient(135deg, #f3e5f5 0%, #ffffff 100%);
+    padding: 80px 10%;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+}
+.hero-content { display: flex; align-items: center; gap: 50px; flex-wrap: wrap; width: 100%; }
+.hero-text { flex: 1; min-width: 300px; }
+.hero-text h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; }
+.highlight { color: var(--morado-lila); }
+
+/* FORMULARIO GLASS-STYLE */
+.hero-form { flex: 1; min-width: 350px; }
+.glass-form { background: white; padding: 40px; border-radius: 20px; border: 1px solid #eee; }
+.shadow { box-shadow: var(--sombra); }
+.glass-form h3 { color: var(--morado-fuerte); margin-bottom: 10px; }
+.glass-form p { font-size: 0.9rem; color: #666; margin-bottom: 25px; }
+
+.input-group { margin-bottom: 20px; text-align: left; }
+.input-group label { display: block; font-size: 0.9rem; margin-bottom: 5px; font-weight: 600; }
+.input-group input, .input-group textarea {
+    width: 100%; padding: 12px; border: 2px solid #f0f0f0; border-radius: 10px; outline: none; transition: 0.3s;
+}
+.input-group input:focus, .input-group textarea:focus { border-color: var(--morado-lila); }
+
+.btn-submit {
+    width: 100%; padding: 15px; background: var(--morado-lila); color: white; border: none;
+    border-radius: 10px; font-weight: bold; cursor: pointer; transition: 0.3s;
+}
+.btn-submit:hover { background: var(--morado-fuerte); transform: translateY(-3px); }
+
+/* COOKIES IZQUIERDA */
+.cookie-notice {
+    position: fixed; bottom: 30px; left: 30px; width: 280px; background: white;
+    padding: 25px; border-radius: 15px; z-index: 9999; border-left: 6px solid var(--morado-lila); text-align: center;
+}
+.cookie-notice i { font-size: 2rem; color: var(--morado-lila); margin-bottom: 10px; }
+#accept-cookies { background: var(--morado-lila); color: white; border: none; padding: 8px 20px; border-radius: 20px; cursor: pointer; font-weight: 600; }
+
+/* PRODUCTOS Y FOOTER */
+.products-preview { padding: 80px 10%; text-align: center; }
+.carousel-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+.product-card { background: white; border-radius: 20px; overflow: hidden; transition: 0.4s; }
+.product-card img { width: 100%; height: 300px; object-fit: cover; }
+.info { padding: 20px; }
+
+footer { background: #f8f9fa; padding: 50px 10% 20px; text-align: center; border-top: 1px solid #eee; }
+.socials { margin-bottom: 20px; }
+.socials a { color: var(--morado-lila); font-size: 1.5rem; margin: 0 15px; }
+.legal-box { margin-top: 20px; display: flex; justify-content: center; gap: 15px; }
+.btn-legal { text-decoration: none; color: var(--morado-lila); border: 1px solid var(--morado-lila); padding: 5px 15px; border-radius: 5px; font-size: 0.8rem; transition: 0.3s; }
+.btn-legal:hover { background: var(--morado-lila); color: white; }
+
+/* --- LOGO CHARME CON RELLENO Y GLOW LILA --- */
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-style: italic;
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+}
+
+.char { 
+    color: #9b59b6;
+    font-weight: 900; 
+    /* Sombreado suave tipo "glow" en morado lila */
+    text-shadow: 2px 2px 10px rgba(155, 89, 182, 0.2); 
+}
+
+.me { 
+    color: #2d3436; 
+    font-weight: 700; /* Aumentamos un poco más el relleno */
+    margin-left: -1px;
+    /* Un sombreado más definido para la parte lila */
+    text-shadow: 0px 0px 15px rgba(155, 89, 182, 0.4);
+    transition: 0.3s ease;
+}
+
+/* Efecto interactivo: Brilla más al pasar el ratón */
+.logo:hover .char {
+    text-shadow: 0px 0px 25px rgba(155, 89, 182, 0.7);
+    transform: scale(1.02);
+}
+
+
+
+/* --- AJUSTES PARA MÓVIL Y TABLET --- */
+
+@media (max-width: 768px) {
+    /* Navbar: Permite que el menú se envuelva si hay muchos botones */
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        margin-top: 15px;
+        gap: 10px;
+        font-size: 0.9rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Hero: El texto y el formulario se ponen uno debajo del otro */
+    .main-hero {
+        padding: 40px 5%;
+        text-align: center;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem; /* Texto más pequeño en móvil */
+    }
+
+    .hero-form {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .glass-form {
+        padding: 25px 20px;
+    }
+
+    /* Cookies: Ocupan el ancho completo abajo para que sean fáciles de tocar */
+    .cookie-notice {
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        width: calc(100% - 20px);
+    }
+
+    /* Productos: Se verán en 1 o 2 columnas según el tamaño */
+    .carousel-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
