@@ -87,7 +87,7 @@ footer { background: #f8f9fa; padding: 50px 10% 20px; text-align: center; border
 .logo {
     font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
-    font-style: italic;
+    font-style: italic ;
     letter-spacing: -0.5px;
     display: flex;
     align-items: center;
@@ -172,3 +172,101 @@ footer { background: #f8f9fa; padding: 50px 10% 20px; text-align: center; border
     }
 }
 
+---
+
+### 2. CSS Añadido (`style.css`)
+
+Añade estas reglas a tu archivo CSS para que el mapa y el botón de WhatsApp se vean perfectos:
+
+```css
+/* --- SECCIÓN UBICACIÓN --- */
+.location-section {
+    padding: 60px 10%;
+    background: #fdfaff; /* Un tono lila muy sutil de fondo */
+    text-align: center;
+}
+
+.map-container {
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 30px;
+    border: 5px solid white; /* Efecto marco elegante */
+}
+
+/* --- WHATSAPP FLOTANTE --- */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    z-index: 1000;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1) rotate(5deg);
+    background-color: #128c7e;
+}
+
+/* Mensaje emergente al lado del botón */
+.whatsapp-float .tooltip {
+    position: absolute;
+    right: 80px;
+    background: white;
+    color: #333;
+    padding: 8px 15px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+.whatsapp-float:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+.products-preview h2.title {
+    color: var(--morado-fuerte);
+    margin-bottom: 30px;
+    text-align: center; 
+    width: 100%;       
+    font-family: 'Playfair Display', serif; 
+    font-style: italic ;
+}
+
+.location-section h2.title {
+    color: var(--morado-fuerte);
+    margin-bottom: 30px;
+    text-align: center; 
+    width: 100%;       
+    font-family: 'Playfair Display', serif; 
+    font-style: italic ;
+}
+
+/* Ajuste para móvil: el botón no debe tapar contenido importante */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+    }
+    .whatsapp-float .tooltip {
+        display: none; /* En móvil mejor quitar el mensaje para no ocupar pantalla */
+    }
+}
