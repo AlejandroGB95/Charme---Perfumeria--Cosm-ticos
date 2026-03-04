@@ -270,3 +270,67 @@ Añade estas reglas a tu archivo CSS para que el mapa y el botón de WhatsApp se
         display: none; /* En móvil mejor quitar el mensaje para no ocupar pantalla */
     }
 }
+
+.schedule-box {
+    background: white;
+    max-width: 500px;
+    margin: -50px auto 0; /* Lo sube un poco para que pise ligeramente el mapa */
+    padding: 30px;
+    border-radius: 15px;
+    position: relative;
+    z-index: 10;
+}
+.schedule-box h3 { color: var(--morado-fuerte); margin-bottom: 15px; }
+.schedule-box p { display: flex; justify-content: space-between; border-bottom: 1px dashed #eee; padding: 5px 0; }
+.schedule-box span { font-weight: 600; color: #333; }
+
+.brands-section { padding: 40px 10%; text-align: center; background: white; }
+.brands-grid { display: flex; justify-content: space-around; align-items: center; opacity: 0.6; filter: grayscale(1); gap: 30px; flex-wrap: wrap; }
+.brands-grid img { height: 40px; transition: 0.3s; }
+.brands-grid img:hover { filter: grayscale(0); opacity: 1; transform: scale(1.1); }
+
+.btn-review {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #4285F4; /* Color azul Google */
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.btn-review:hover { background: #357ae8; transform: translateY(-3px); }
+
+.brands-text-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.brand-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ccc; /* Color gris suave */
+    letter-spacing: 3px;
+    transition: 0.4s;
+    cursor: default;
+}
+
+.brand-name:hover {
+    color: var(--morado-lila); /* Se ilumina al pasar el ratón */
+    transform: scale(1.1);
+}
+
+.brands-section h2.subtitle {
+    color: var(--morado-fuerte);
+    margin-bottom: 30px;
+    text-align: center; 
+    width: 100%;       
+    font-family: 'Playfair Display', serif; 
+    font-style: italic ;
+}
